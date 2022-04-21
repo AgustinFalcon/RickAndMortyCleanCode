@@ -1,0 +1,2 @@
+rootProject.name = "PracticeSealedClass"
+include ':app'
