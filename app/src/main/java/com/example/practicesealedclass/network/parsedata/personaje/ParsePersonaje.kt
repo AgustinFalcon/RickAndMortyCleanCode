@@ -1,6 +1,6 @@
 package com.example.practicesealedclass.network.parsedata.personaje
 
-data class Personaje (
+data class ParsePersonaje (
     val id: Int,
     val name: String,
     val status: String,
