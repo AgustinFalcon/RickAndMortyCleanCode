@@ -8,9 +8,9 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.practicesealedclass.databinding.FragmentMainBinding
-import com.example.practicesealedclass.viewmodels.ApiViewModel
 import com.example.practicesealedclass.viewmodels.Estados
 import com.example.practicesealedclass.viewmodels.MainViewModel
+import com.example.practicesealedclass.viewmodels.PersonajeViewModel
 
 
 class MainFragment : Fragment() {
@@ -19,7 +19,7 @@ class MainFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val mainViewModel: MainViewModel by viewModels()
-    private val personajeViewModel: ApiViewModel by viewModels()
+    private val personajeViewModel: PersonajeViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,7 +30,7 @@ class MainFragment : Fragment() {
 
 
         binding.btnSiguiente.setOnClickListener {
-            mainViewModel.validate(binding.edUser.text.toString(), binding.edPass.text.toString())
+            mainViewModel.validate(/*binding.edUser.text.toString(), binding.edPass.text.toString()*/"pepe","123")
             personajeViewModel.setUrl("https://rickandmortyapi.com/api/")
             personajeViewModel.getPersonaje()
         }
